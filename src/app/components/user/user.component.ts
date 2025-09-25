@@ -15,12 +15,13 @@ interface User {
 })
 export class UserComponent {
   public readonly user = input.required<User>();
-  public readonly select = output<string>();
+  public readonly selected = input<boolean>(false);
+  public readonly onSelectUser = output<string>();
   public readonly imagePath = computed(
     () => 'assets/users/' + this.user().avatar  
   );
 
-  public onSelectUser() {
-    this.select.emit(this.user().id);
+  public selectUser() {
+    this.onSelectUser.emit(this.user().id);
   }
 }

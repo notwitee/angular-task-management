@@ -12,14 +12,13 @@ import { TasksComponent } from "./components/tasks/tasks.component";
 })
 export class AppComponent {
   public users = DUMMY_USERS;
-  // TODO this selectedUser dont have default value so it will make the user interface bug
-  public selectedUser = signal<string>('');
+  public selectedUserId = signal<string>('');
 
-  public selectedUserId(id: string): void {
-    this.selectedUser.set(id);
-  }
-  public get selectedUserName() {
-    return this.users.find((user) => user.id === this.selectedUser())?.name
+  onSelectedUserId(id: string) {
+    this.selectedUserId.set(id);
   }
 
+  get selectedUser() {
+    return this.users.find((user) => user.id === this.selectedUserId());
+  }
 }
