@@ -1,8 +1,12 @@
+@if (addTask()) {
+    <app-task-modal (didDismiss)="addTask.set(false)" (onCreate)="createNewTask($event)"/>
+}
+
 <section id="tasks">
     <header>
         <h2>{{ userName() }}' Tasks</h2>
         <menu>
-            <button>Add Task</button>
+            <button (click)="addTask.set(true)">Add Task</button>
         </menu>
     </header>
     <ul>
