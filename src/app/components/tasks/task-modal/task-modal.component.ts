@@ -7,11 +7,11 @@ export type newTask = {
   dueDate: string
 }
 @Component({
-  selector: 'app-task-modal',
   standalone: true,
-  imports: [ReactiveFormsModule],
-  templateUrl: './task-modal.component.html',
-  styleUrl: './task-modal.component.css'
+    selector: 'app-task-modal',
+    imports: [ReactiveFormsModule],
+    templateUrl: './task-modal.component.html',
+    styleUrl: './task-modal.component.css'
 })
 export class TaskModalComponent {
   public readonly didDismiss = output<void>();

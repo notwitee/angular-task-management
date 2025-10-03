@@ -8,11 +8,11 @@ type Task = {
   dueDate: string;
 }
 @Component({
-  selector: 'app-task',
   standalone: true,
-  imports: [],
-  templateUrl: './task.component.html',
-  styleUrl: './task.component.css'
+    selector: 'app-task',
+    imports: [],
+    templateUrl: './task.component.html',
+    styleUrl: './task.component.css'
 })
 export class TaskComponent {
   public readonly onCompletedTask = output<string>()

@@ -4,11 +4,11 @@ import { DUMMY_TASKS } from '../../data/dummy-tasks';
 import { newTask, TaskModalComponent } from './task-modal/task-modal.component';
 
 @Component({
-  selector: 'app-tasks',
   standalone: true,
-  imports: [TaskComponent, TaskModalComponent],
-  templateUrl: './tasks.component.html',
-  styleUrl: './tasks.component.css'
+    selector: 'app-tasks',
+    imports: [TaskComponent, TaskModalComponent],
+    templateUrl: './tasks.component.html',
+    styleUrl: './tasks.component.css'
 })
 export class TasksComponent {
   public readonly userId = input.required<string>();
